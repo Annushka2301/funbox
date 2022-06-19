@@ -1,0 +1,167 @@
+.relative {
+    position: relative;
+    margin: 0 40px 80px 40px;
+    cursor: pointer;
+}
+
+.card {
+    position: relative;
+    height: 585px;
+    width: 400px;
+    overflow: hidden;
+    padding: 30px 50px;
+    border-radius: 10px; 
+    border-bottom: 4px solid #1698d9;
+    border-right: 4px solid #1698d9;
+    z-index: 1;
+}
+
+.topBorder {
+    height: 5px;
+    width: 359px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #1698d9;
+}
+
+.leftBorder {
+    height: 542px;
+    width: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #1698d9;
+    z-index: 10;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/cat.png);
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: -50px 240px;}
+
+.card::before {
+    content: '';
+    position: absolute;
+    width: 1100%; 
+    height: 1100%;
+    top: 20px; 
+    right: -494%;
+    background: white;
+    transform-origin: 2030px 0;
+    transform: rotate(-45deg);
+    border: 4px solid #1698d9;
+    z-index: -1;
+}
+
+.label {
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: #666;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.flavour {
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.linkWrap {
+    position: absolute;
+    bottom: -35px;
+    width: 400px;
+    text-align: center;
+}
+
+.linkDescr {
+    color: white;
+}
+
+.link {
+    margin-left: 2px;
+    color: #1698d9;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.weight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90px;
+    height: 90px;
+    padding-top:10px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: #1698d9;
+    color: white;
+    font-size: 42px;
+    line-height: 35px;
+    border-radius: 100px;
+    z-index: 10;
+}
+
+.kg {
+    font-size: 21px;
+    line-height: 30px;
+}
+
+.cardHover:hover {
+    border-color: #2ea8e6;
+}
+
+.cardHover:hover > .weight,
+.cardHover:hover > .topBorder,
+.cardHover:hover > .leftBorder{
+    background-color: #2ea8e6;
+}
+
+.cardChosen, .cardChosen:hover {
+    border-color: #d91667;
+}
+
+.cardChosen::before {
+    border-color: #d91667;
+}
+
+.weightChosen, .cardChosen:hover > .weightChosen {
+    background-color: #d91667;
+}
+
+.linkDescrNotAvailiable {
+    color: #ffff66;
+}
+
+.cardNotAvailiable {
+    border-color: #b3b3b3;
+}
+.cardNotAvailiable > * {
+    opacity: .2;
+}
+.cardNotAvailiable::before {
+    border-color: #b3b3b3;
+}
+.cardNotAvailiable::after {
+    opacity: .4;
+}
+.weightNotAvailiable {
+    background-color: #b3b3b3;
+    opacity: 1;
+}
+.pinkLabel {
+    color: #d91667;
+}

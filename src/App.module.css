@@ -1,0 +1,53 @@
+
+@font-face {
+  font-family: 'TrebuchetMS';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+  url('./fonts/TrebuchetMS.woff2') format('woff2'),
+  url('./fonts/TrebuchetMS.woff') format('woff'),
+}
+
+@font-face {
+  font-family: 'TrebuchetMS';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+  url('./fonts/TrebuchetMS-Bold.woff2') format('woff2'),
+  url('./fonts/TrebuchetMS-Bold.woff') format('woff'),
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'TrebuchetMS', sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 150px 50px;
+  background: url(./img/prototype.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.title {
+  margin-bottom: 23px;
+  color: white;
+  font-weight: 400;
+  font-size: 36px;
+}
+
+.cardsWrap {
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
